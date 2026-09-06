@@ -1,73 +1,126 @@
+// package training;
+
+// import org.openqa.selenium.WebDriver;
+// import org.openqa.selenium.chrome.ChromeDriver;
+// import org.testng.Assert;
+// import org.testng.annotations.AfterTest;
+// import org.testng.annotations.BeforeTest;
+// import org.testng.annotations.Test;
+// import org.openqa.selenium.By;		
+// import org.openqa.selenium.WebDriver;
+// import org.openqa.selenium.chrome.ChromeDriver;
+// import org.openqa.selenium.firefox.FirefoxDriver;		
+// import org.testng.Assert;		
+// import org.testng.annotations.Test;	
+// import org.testng.annotations.BeforeTest;	
+// import org.testng.annotations.AfterTest;		
+
+
+
+// // public class FirstSeleniumJavaTest {
+
+// // 	private WebDriver driver;		
+// // 	@Test				
+// // 	public void testEasy() {
+
+// // 		driver.get("https://testautomationu.applitools.com/"); 
+// // 		driver.manage().window().maximize();
+
+// // 		String title = driver.getTitle();
+// // 		AssertJUnit.assertTrue(title.equals("Test Automation University | Applitools"));
+// // 	}	
+
+// // 	@Test				
+// // 	public void testTwo() {	
+
+// // 		driver.get("https://www.google.co.uk/"); 
+// // 		driver.manage().window().maximize();
+
+// // 		String title1 = driver.getTitle();
+// // 		System.out.println("title is "+title1);
+// // 		AssertJUnit.assertTrue(title1.equals("Google"));
+
+// // 	}	
+
+// // 	@BeforeTest
+// // 	public void beforeTest() {	
+// // 	    driver = new ChromeDriver();  
+// // 	}		
+// // 	@AfterTest
+// // 	public void afterTest() {
+// // 		driver.quit();			
+// // 	}	
+// // }
+// public class FirstSeleniumJavaTest {
+
+//     private WebDriver driver;
+
+//     @BeforeMethod
+// 	public void setUp() {
+//     driver = new ChromeDriver();
+// 	}
+
+//     @Test
+//     public void testEasy() {
+//         driver.get("https://testautomationu.applitools.com/");
+//         driver.manage().window().maximize();
+
+//         String title = driver.getTitle();
+
+//         System.out.println("Actual title = " + title);
+
+//         Assert.assertEquals(
+//             title,
+//             "Test Automation University | Applitools"
+//         );
+//     }
+
+//     @Test
+//     public void testTwo() {
+//         driver.get("https://www.google.co.uk/");
+//         driver.manage().window().maximize();
+
+//         String title = driver.getTitle();
+
+//         System.out.println("Actual title = " + title);
+
+//         Assert.assertEquals(title, "Google");
+//     }
+
+//     @AfterMethod
+// 	public void tearDown() {
+//     driver.quit();
+// 	}
+// }
+
 package training;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;		
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;		
-import org.testng.Assert;		
-import org.testng.annotations.Test;	
-import org.testng.annotations.BeforeTest;	
-import org.testng.annotations.AfterTest;		
 
-
-
-// public class FirstSeleniumJavaTest {
-
-// 	private WebDriver driver;		
-// 	@Test				
-// 	public void testEasy() {
-
-// 		driver.get("https://testautomationu.applitools.com/"); 
-// 		driver.manage().window().maximize();
-
-// 		String title = driver.getTitle();
-// 		AssertJUnit.assertTrue(title.equals("Test Automation University | Applitools"));
-// 	}	
-
-// 	@Test				
-// 	public void testTwo() {	
-
-// 		driver.get("https://www.google.co.uk/"); 
-// 		driver.manage().window().maximize();
-
-// 		String title1 = driver.getTitle();
-// 		System.out.println("title is "+title1);
-// 		AssertJUnit.assertTrue(title1.equals("Google"));
-
-// 	}	
-
-// 	@BeforeTest
-// 	public void beforeTest() {	
-// 	    driver = new ChromeDriver();  
-// 	}		
-// 	@AfterTest
-// 	public void afterTest() {
-// 		driver.quit();			
-// 	}	
-// }
 public class FirstSeleniumJavaTest {
 
     private WebDriver driver;
 
-    @BeforeTest
-    public void beforeTest() {
+    @BeforeMethod
+    public void setUp() {
         driver = new ChromeDriver();
     }
 
     @Test
     public void testEasy() {
+
         driver.get("https://testautomationu.applitools.com/");
+
         driver.manage().window().maximize();
 
         String title = driver.getTitle();
 
-        System.out.println("Actual title = " + title);
+        System.out.println("TAU title = " + title);
 
         Assert.assertEquals(
             title,
@@ -77,18 +130,20 @@ public class FirstSeleniumJavaTest {
 
     @Test
     public void testTwo() {
+
         driver.get("https://www.google.co.uk/");
+
         driver.manage().window().maximize();
 
         String title = driver.getTitle();
 
-        System.out.println("Actual title = " + title);
+        System.out.println("Google title = " + title);
 
         Assert.assertEquals(title, "Google");
     }
 
-    @AfterTest
-    public void afterTest() {
+    @AfterMethod
+    public void tearDown() {
         driver.quit();
     }
 }
