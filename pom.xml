@@ -46,23 +46,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.6.0</version>
 				<configuration>
-					<configuration>	        
-						<skipTests>false</skipTests>    
-					</configuration>
-					<parallel>methods</parallel>
-					<threadCount>2</threadCount>
+					<skipTests>false</skipTests>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
-				<executions>
-					<execution>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
