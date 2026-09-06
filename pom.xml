@@ -15,7 +15,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.48.0</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>${testng.version}</version>
+			<version>7.12.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
