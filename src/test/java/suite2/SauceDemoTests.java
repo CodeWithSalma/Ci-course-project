@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
+import java.time.Duration;
 
 
 public class SauceDemoTests {
@@ -33,7 +34,7 @@ public class SauceDemoTests {
 		};
 		try {
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait(driver, 30);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			wait.until(expectation);
 		} catch (Throwable error) {
 			Assert.fail("Timeout waiting for Page Load Request to complete.");
