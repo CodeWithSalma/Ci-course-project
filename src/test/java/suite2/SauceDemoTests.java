@@ -18,6 +18,7 @@ import java.time.Duration;
 
 public class SauceDemoTests {
 	private WebDriver driver;
+	private WebDriverWait wait;
 	private String url = "https://www.saucedemo.com/";
 	private String header = "Swag Labs";
 
@@ -91,6 +92,7 @@ public class SauceDemoTests {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	}	
 	//hooks - to tear down after test is executed
 	@AfterTest
